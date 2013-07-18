@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'sinatra', '1.3.3'
+gem 'sinatra', '1.4.3'
 gem 'thin'
 gem 'json', '1.7.5'
 gem 'rack-flash3', '1.0.1', require: 'rack/flash'
