@@ -33,3 +33,5 @@ gem 'omniauth-saml', '1.0.0'
 group :development do
   gem 'shotgun', '0.9'
 end
+
+gem 'ejs'

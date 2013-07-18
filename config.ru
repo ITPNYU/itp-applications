@@ -55,6 +55,7 @@ builder = Rack::Builder.new do
   map ('/attachments')          { run AttachmentsApp }
   map ('/auth' )                { run AuthenticationManager }
   map ('/api')                  { run API }
+  map ('/posts')                { run Posts }
   map ('/readings')             { run Readings }
   map ('/places')               { run Places }
   map ('/students')             { run Students }
