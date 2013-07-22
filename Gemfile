@@ -21,6 +21,7 @@ gem 'will_paginate', '3.0.3', require: ['will_paginate', 'will_paginate/data_map
 # assets
 gem 'sprockets', '~>2.0'
 gem 'sass'
+gem 'handlebars_assets'
 
 # resources
 gem 'aws-s3', '0.6.3', require: "aws/s3"
