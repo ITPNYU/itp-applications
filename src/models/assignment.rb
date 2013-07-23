@@ -40,6 +40,15 @@ class Assignment
     all(draft: false, active: true, order: :published_at.desc)
   end
 
+  def self.all_active
+    all(:active => true)
+  end
+
+  # Public: Get 1 model by ID and ensure that it is active.
+  def self.get_active(id)
+    first(:id => id, :active => true)
+  end
+
   #############################################################################
   #
   # INSTANCE METHODS

@@ -59,7 +59,7 @@ class User
   end
 
   def admin?
-    self.role == "advisor" || self.role == "resident"
+    self.role == "admin"
   end
 
   def provisional?
