@@ -1,5 +1,5 @@
 class Posts < Sinatra::Base
-  register Sinatra::ThesisApp
+  register Sinatra::BaseApp
 
   before do
     env['warden'].authenticate!

@@ -1,5 +1,5 @@
 class Readings < Sinatra::Base
-  register Sinatra::ThesisApp
+  register Sinatra::BaseApp
 
   get '/' do
     @collection = Assignment.all_active

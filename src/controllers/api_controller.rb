@@ -1,5 +1,5 @@
 class API < Sinatra::Base
-  register Sinatra::ThesisApp
+  register Sinatra::BaseApp
   register WillPaginate::Sinatra
 
   before do
