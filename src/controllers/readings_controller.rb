@@ -2,14 +2,24 @@ class Readings < Sinatra::Base
   register Sinatra::ThesisApp
 
   get '/' do
-    @assignments = Assignment.all_active
+    @collection = Assignment.all_active
     erb :'readings/index'
   end
 
-  get '/:id' do
-    @assignment = Assignment.get_active(params[:id])
+  # Create route
+  get '/new' do
+    env['warden'].authenticate!
+    halt 403 unless env['warden'].user.admin?
 
-    if @assignment.draft
+    @model = Assignment.new
+
+    erb :'readings/edit'
+  end
+
+  get '/:id' do
+    @model = Assignment.get_active(params[:id])
+
+    if @model.draft
       halt 404 unless env['warden'].user.admin?
     end
 
@@ -21,13 +31,7 @@ class Readings < Sinatra::Base
     env['warden'].authenticate!
     halt 403 unless env['warden'].user.admin?
 
-    erb :'readings/edit'
-  end
-
-  # Create route
-  get '/new' do
-    env['warden'].authenticate!
-    halt 403 unless env['warden'].user.admin?
+    @model = Assignment.get_active(params[:id])
 
     erb :'readings/edit'
   end
