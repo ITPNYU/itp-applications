@@ -1,0 +1,21 @@
+//= require libraries/jquery
+//= require libraries/underscore
+//= require libraries/backbone
+//= require libraries/moment
+//= require libraries/string.min
+//= require handlebars
+//= require libraries/chosen.jquery
+//= require libraries/marked
+//= require libraries/spin
+//= require libraries/ladda
+//= require ckeditor/ckeditor
+//= require ckeditor/adapters/jquery
+//= require handlebars-helpers
+// require main
+//= require image_upload
+
+// require backbone_setup
+//= require_tree ./templates
+//= require_tree ./models
+//= require_tree ./collections
+//= require_tree ./views

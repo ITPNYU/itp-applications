@@ -1,0 +1,15 @@
+<form class="form">
+  <label for="title">Reading Name</label>
+  <p>How you want this reading to appear in list form.</p>
+  <input type="text" id="reading-form-title" value="{{title}}" />
+
+  <label for="content">Descripton</label>
+  <p>The page numbers or link to reading</p>
+  <textarea id="reading-form-content">{{content}}</textarea>
+
+  <div class="publish-buttons">
+    <button id="reading-form-draft" class="ladda-button" data-size="l" data-color="red" data-style="expand-right"><span class="ladda-label">Draft</span></button>
+
+    <button id="reading-form-publish" class="ladda-button" data-size="l" data-color="blue" data-style="expand-right"><span class="ladda-label">Publish</span></button>
+  </div>
+</form>

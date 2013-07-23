@@ -1,0 +1,848 @@
+/*****************************************************************************
+ *
+ * NATIVE HTML ELEMENTS, LISTED ALPHABETICALLY
+ *
+ *****************************************************************************/
+
+a {
+  color: rgb(53, 130, 245);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(0, 0, 245);
+  text-decoration: underline;
+}
+
+blockquote {
+  margin-bottom: 25px;
+  margin-top: 25px;
+  font-size: 26px;
+  line-height: 50px;
+  font-style: italic;
+  font-weight: 400;
+  text-align: left;
+  text-indent: 16px;
+}
+
+code {
+  color: #555;
+  font-size: 70%;
+}
+
+em, i {
+  font-style: italic;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.5em;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+hr {
+  margin: 3em 25% 1.5em;
+  outline: none;
+  border-bottom: 1px solid #aaa;
+  border-top: 1px solid #fff;
+  border-left: none;
+  border-right: none;
+}
+
+html {
+  font-size: 100%; /* 16px */
+  line-height: 1.5em; /* 24px */
+}
+
+h1 {
+  font-size: 1.75em; /* 28px */
+  line-height: 1.714285714em; /* 48 / 28 */
+}
+
+h2 {
+  font-size: 2.25em; /* 36px */
+  line-height: 1.333333333em; /* (24*3) / 36 */
+  letter-spacing: 1px;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+h3 {
+  font-size: 1.75em; /* 28px */
+  line-height: 1.714285714em; /* 48 / 28 */
+  margin: 0;
+}
+
+h4 {
+  font-size: 1.5em; /* 24px */
+  line-height: 1em;
+  margin: 1em 0 1em;
+}
+
+h5 {
+  font-size: 1.25em; /* 20px */
+  font-weight: normal;
+  line-height: 2.4em; /* 48 / 20 */
+}
+
+h6 {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.875em; /* 14 / 16 */
+  margin-top: 0;
+  line-height: 1.714285714em;
+}
+
+/*
+  NEW HEADERS
+*/
+
+h2 {
+  font-size: 1em;
+  line-height: 3em;
+}
+
+h3 {
+  font-size: 1.125em; /* 18 / 16 */
+  line-height: 2em; /* 36 / 18 */
+  padding-top: 0.666666667em; /* 12 / 18 */
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: #000;
+}
+
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+  color: rgb(53, 130, 245);
+}
+
+img {
+  max-width: 100%;
+  max-height: 40em;
+}
+
+p {
+  line-height: 1.5em;
+  margin: 0;
+}
+
+pre {
+  overflow-x: scroll;
+}
+
+ul {
+  list-style: disc;
+}
+
+ul, ol {
+  margin-left: 1.5em;
+}
+
+input, textarea {
+  border: .0625em solid #aaa;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  font: inherit;
+  line-height: 1.5em;
+  margin: 0 0 1.5em 0;
+  padding: 0.6875em 0.28em 0.6875em;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+textarea {
+  font: inherit;
+  outline: 0;
+  line-height: 1.5em;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  width: 100%;
+  min-height: 400px;
+  height: 100%;
+  margin: 0;
+}
+
+input[type=text],
+input[type=password],
+select {
+  display: block;
+  font: inherit;
+  padding: 10px;
+  position: relative;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input[type="submit"],
+.button-labels label,
+.button-labels a {
+  background-color: #bbb;
+  color: #fff;
+  font: inherit;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin-right: 0.25em;
+  padding: 0.45em 1em;
+  vertical-align: baseline;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  display: block;
+  position: relative;
+}
+
+input:focus, textarea:focus {
+  border-color: rgb(53, 130, 245);
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-shadow: 0 1px 3px rgba(128,128,128,0.4) inset;
+  -moz-box-shadow: 0 1px 3px rgba(128,128,128,0.4) inset;
+  box-shadow: 0 1px 3px rgba(128,128,128,0.4) inset;
+}
+
+input[type=submit]:hover,
+button:hover {
+  border-color: #bbb;
+  cursor: pointer;
+}
+
+/*****************************************************************************
+ *
+ * SKELETON
+ *
+ * The site is in 3 sections each which are 100% wide and clear both.
+ * #top, #middle, #bottom
+ *
+ *
+ *****************************************************************************/
+
+#top, #middle, #bottom {
+  min-width: 960px;
+}
+
+#top {
+  background-color: #efefef;
+}
+
+#middle {
+  min-height: 400px;
+  padding-top: 0.75em;
+}
+
+#header {
+  padding: 0.5em 0;
+}
+
+#header, #middle, #footer {
+  clear: both;
+  max-width: 63.75rem;
+  margin: 0 auto;
+}
+
+#middle {
+  overflow-y: auto;
+}
+
+#main-content {
+  width: 100%;
+}
+
+#bottom {
+  margin-top: 3em;
+}
+
+#footer {
+  border-top: 1px solid #ddd;
+  font-size: 80%;
+  padding: 1em 0 2em;
+}
+
+/*****************************************************************************
+ *
+ * FLASH MESSAGES
+ *
+ *****************************************************************************/
+
+#flash > div {
+  line-height: 1.5em;
+  text-align: center;
+  padding: 0.5em 0.35em;
+  margin: -.5em auto .75em;
+}
+
+#flash a {
+  color: #222;
+}
+
+.message-success {
+  background-color: rgba(68, 202, 71, 0.54);
+  border: 1.5px solid rgba(68, 202, 71, 1);
+}
+
+.message-error {
+  background-color: rgba(202, 68, 71, 0.54);
+  border: 1.5px solid rgba(202, 68, 71, 1);
+}
+
+.message-notification {
+  background-color: rgba(48, 199, 213, 0.54);
+  border: 1.5px solid rgba(48, 199, 213, 1);
+}
+
+/*****************************************************************************
+ *
+ * TOP
+ *
+ *****************************************************************************/
+
+#header a {
+  color: black;
+}
+
+#header a:hover {
+  color: rgb(53, 130, 245);
+}
+
+#logo {
+  height: 1.5em;
+  float: left;
+  margin-right: 0.75em;
+}
+
+#header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+
+#header ul li {
+  display: inline;
+  float: left;
+  font-size: .875em;
+  line-height: 1.714285714em;
+  padding: 0 0.75em;
+  margin: 0;
+  border-right: 1px solid rgba(210, 210, 210,0.9);
+  border-left: 1px solid rgba(255,255,255,0.8);
+}
+
+#header ul li:first-child {
+  border-left: none;
+}
+
+#header ul li:last-child {
+  border-right: none;
+  margin-right: 0;
+}
+
+#account-nav {
+  text-align: right;
+}
+
+/*****************************************************************************
+ *
+ * LOGIN
+ *
+ *****************************************************************************/
+
+#login-form {
+  background-color: #ffe87a;
+  padding: 1.4em;
+}
+
+#login-form input {
+  display: inline-block;
+  margin-right: 0.5em;
+}
+
+/*****************************************************************************
+ *
+ * STUDENT SIDEBAR
+ *
+ *****************************************************************************/
+
+.student-sidebar ul {
+  margin: 0 0 1.5em;
+  list-style-type: none;
+}
+
+.student-sidebar li {
+  line-height: 1.25em;
+  margin: 0.25em 0;
+}
+
+.student-sidebar li a {
+  color: #666;
+}
+
+.student-sidebar li.current {
+  border-left: 3px solid rgb(53, 130, 245);
+  border-left: 3px solid #7a46bf;
+  margin-left: -6px;
+  padding-left: 3px;
+}
+
+.student-sidebar li.current a {
+  color: #000;
+}
+
+/*****************************************************************************
+ *
+ * PROGRESS POST & ANNOUNCEMENT
+ *
+ *****************************************************************************/
+
+.post,
+.announcement {
+  border-bottom: 0.0625em solid #ddd;
+  padding: 0 0 1.4375em;
+  margin: 3em 0 3em;
+}
+
+.post.single,
+.announcement.single,
+.post:first-child,
+.announcement:first-child {
+  margin-top: 0;
+}
+
+.announcement .hgroup h1,
+.post .hgroup h1,
+.assignment .hgroup h1 {
+  margin: 1em 0 0;
+}
+
+.post.single .hgroup h1,
+.announcement.single .hgroup h1,
+.assignment.single .hgroup h1 {
+  margin-top: 0em;
+}
+
+.post .hgroup h2,
+.announcement .hgroup h2,
+.assignment .hgroup h2 {
+  margin: 0;
+  line-height: 1.5em;
+}
+
+.post .hgroup h2 a {
+  color: rgb(53, 130, 245);
+}
+
+.post .hgroup h3,
+.announcement .hgroup h3,
+.assignment .hgroup h3 {
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+
+.post .hgroup h4,
+.announcement .hgroup h4,
+.assignment .hgroup h4 {
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 1.5em;
+  margin: 0;
+}
+
+.post h4.category a {
+  color: rgb(53, 130, 245);
+}
+
+.category-list {
+  list-style-type: none;
+  margin: 0;
+}
+
+.category-list li {
+  display: inline-block;
+  margin: 0 1em 0 0;
+}
+
+.category-list li a {
+  color: #bbb;
+}
+
+.category-list li a.current {
+  color: #000;
+}
+
+.post-content {
+  margin-top: 1.5em;
+  word-wrap: break-word;
+}
+
+.post-content h1 {
+  font-size: 1.625em; /* 26 / 16 */
+  text-transform: uppercase;
+  line-height: 1.846153846em; /* 48 / 26 */
+  margin: 0;
+}
+
+.post-content h2 {
+  font-size: 1.5em; /* 24 / 16 */
+  line-height: 2em;
+  margin: 1em 0 0;
+}
+
+.post-content h3 {
+  font-size: 1.375em; /* 22 / 16 */
+  line-height: 2.181818182em; /* 24 / 22 * 2 */
+  margin: 1.090909091em 0 0;
+  padding: 0;
+}
+
+.post-content h4 {
+  color: #7a46bf;
+  font-size: 1.25em; /* 20 / 16 */
+  font-weight: bold;
+  line-height: 2.4em;
+  margin: 1.2em 0 0;
+}
+
+.post-content h5 {
+  font-size: 1.125em; /* 18 / 16 */
+  font-weight: bold;
+  line-height: 2.666666666em;
+  margin-top: 1.333333333em;
+}
+
+.post-content h6 {
+  font-weight: bold;
+  margin: 1.5em 0 0;
+  padding: 0;
+  line-height: 3em;
+}
+
+.post-content ul {
+  margin: 0 0 1.5em 1.25em;
+}
+
+.post-content p,
+.announcement-content p {
+  margin: 0 0 1.5em 0;
+}
+
+.post img,
+.post-content img {
+  max-width: 100%;
+}
+
+.announcement h3 em {
+  color: #777;
+  text-transform: lowercase;
+}
+
+.post a,
+.announcement a {
+  margin: 1.5em 0;
+}
+
+.post-read-status {
+  background: #fefde0;
+  padding: .75em 0.75em;
+  line-height: 1.5em;
+}
+
+.permalink {
+  color: #bbb;
+  font-size: 0.875em;
+  line-height: 1.714285714em;
+}
+
+/*****************************************************************************
+ *
+ * EXCERPTS and DASHBOARD VIEWS
+ *
+ *****************************************************************************/
+
+.excerpt {
+  border-bottom: .0625em solid #ddd; /* 1 / 24 */
+  padding: 0.75em 0 0.6875em 0;
+}
+
+.excerpt .content {
+  font-size: .9em;
+}
+
+.excerpt .content * {
+  font-size: 1em;
+}
+
+.excerpt h1, .excerpt h2, .excerpt h3, .excerpt h4, .excerpt h5, .excerpt h6,
+.excerpt p {
+  margin: 0.75em 0;
+  line-height: 1.5em;
+}
+
+.feed-item,
+.assignment-list {
+  border-bottom: .071428571em solid #ddd; /* 1 / 14 */
+  font-size: 0.875em; /* 14 / 16 */
+  line-height: 1.142857143em; /* 16 / 14 */
+}
+
+.feed-item {
+  padding: 1.107142857em 0 1.107142857em;
+}
+
+.assignment-list {
+  padding: 0 0 1.107142857em;
+  margin-bottom: 1.107142857em;
+}
+
+.assignment-list h3,
+.post-excerpt h3.title {
+  font-size: 1.142857143em; /* 16 / 14 */
+  font-weight: normal;
+  line-height: 3em;
+}
+
+.assignment-list .reply-link {
+  display: block;
+  line-height: 3.428571428em;
+}
+
+.post-excerpt {
+  border-bottom: .0625em solid #ddd; /* 1 / 16 */
+  margin: 1.5em 0 0.75em;
+  padding-bottom: .6875em;
+}
+
+.post-excerpt h3.title {
+  line-height: 1.5em;
+}
+
+.post-excerpt h4.author {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin: 0;
+}
+
+.post-excerpt h4.author a {
+  color: rgb(53, 130, 245);
+}
+
+.post-excerpt h5.category {
+  color: #bbb;
+  font-size: 0.875em;
+}
+
+.post-excerpt .content {
+  margin: 0.75em 0;
+}
+
+.button-labels label:hover,
+.button-labels a:hover {
+  background-color: rgb(65, 159, 255);
+  cursor: pointer;
+}
+
+input[checked] + label,
+label.checked,
+.button-labels a.checked {
+  background-color: rgb(40, 140, 240);
+}
+
+input[checked] + label:hover,
+label.checked:hover,
+.button-labels a.checked:hover {
+  background-color: rgb(40, 140, 255);
+}
+
+.button-labels { /* container div */
+  margin: 0.75em 0;
+}
+
+/* hide radio or checkbox buttons, show only the labels. */
+.button-labels input {
+  display: none;
+}
+
+.button-labels label,
+.button-labels a {
+  background-color: rgb(121,121,121);
+  display: block;
+  float: left;
+  font-size: 0.875em;
+  letter-spacing: 0.1em;
+  line-height: 1.714285714em;
+  margin: 0 0.428571428em 0.428571428em 0;
+  padding: 0.214285714em 0.428571428em;
+}
+
+.button-labels a {
+  text-decoration: none;
+}
+
+
+/*****************************************************************************
+ *
+ * PAGE CONTENT
+ *
+ *****************************************************************************/
+
+.page-content p {
+  margin: 1.5em 0;
+}
+
+
+/*****************************************************************************
+ *
+ * COMMENTS
+ *
+ *****************************************************************************/
+
+.comment {
+  margin: 0.75em 0 3em;
+}
+
+.comment-head {
+  background: #f4f4f4;
+  line-height: 3em;
+  padding: 0em 0.5em;
+}
+
+.comment-body {
+  margin: 0 0.75em;
+
+}
+
+.new-comment {
+  border-bottom: 1px solid #ddd;
+  margin: 0 0 1.5em;
+  padding: 0 0 0.75em;
+}
+
+.comment-icon {
+  position: absolute;
+  display: block;
+  float: left;
+  width: 1.2em;
+  height: 1.5em;
+  margin: 0 0.9em;
+}
+
+.comment-description {
+  display: block;
+  padding-left: 3em;
+}
+
+/*****************************************************************************
+ *
+ * FORMAT CLASSES
+ *
+ *****************************************************************************/
+
+.inline {
+  display: inline;
+  list-style-type: none;
+  margin: 0 0;
+}
+
+.inline li {
+  display: inline-block;
+  margin: 0 0.5em 0 0;
+}
+
+.username {
+  color: #7a46bf;
+  font-weight: bold;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.normal-size {
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+.date,
+.caption {
+  color: #bbbbbb;
+}
+
+.caption {
+  font-style: italic;
+}
+
+/* BUTTONS */
+button.small {
+  padding-top: 0em;
+  padding-bottom: 0em;
+}
+
+
+/*  */
+.spaced-row {
+  margin-bottom: 1.5em;
+}
+
+.submit-status {
+  display: none;
+  padding: 0.5em 1em;
+}
+
+.delete-link {
+  color: #c63523;
+}
+
+/* DESCRIPTION: typically a P tag with enough spacing but not that much */
+.description {
+  color: #555;
+  margin: 0.75em 0;
+}
+
+.details p {
+  margin: 0;
+}
+
+
+.full-width {
+  width: 100%;
+}
+
+.hr {
+  border-bottom: 1px solid #aaa;
+  width: 20em;
+  margin: 0 auto;
+  height: 0.125em;
+}
+
+/*#middle { background-image: url('/images/grid.gif'); background-position-y: 0.75em;}*/
+
+.strong {
+  font-weight: bold;
+}
+
+.highlight {
+  background-color: #ffe87a;
+  border: 1px solid #f0c02a;
+  padding: 0.5em 0.25em;
+}
+
+input[type=file] {
+  /*font-size: 85%;*/
+  padding: 0em 0.25em 0.25em;
+  margin: 0.25em;
+}

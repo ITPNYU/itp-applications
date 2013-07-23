@@ -1,0 +1,41 @@
+<div class="col-12">
+  <h1 class="page-title">
+  {{#if id }}
+    Edit Post
+  {{else}}
+    New Post
+  {{/if}}
+  </h1>
+</div>
+
+<div class='col-9 the-form'>
+  <h3>
+    <input type="text" class="post-title" name="post[title]" placeholder="Title of Post..." value="{{ title }}"/>
+  </h3>
+
+  <div class="section">
+    <h6>Content <span class="markdown-mark">&nbsp;</span></h6>
+    <div class="expanding-area" style="background:#eee;">
+      <pre><span></span><br></pre>
+      <textarea id="post-content-form" placeholder="Write your post here..." name="post[content]" style="border-color: #eee;border-bottom: none;">{{content}}</textarea>
+    </div>
+    <div class="info">
+      <h6>Adding Images</h6>
+      <p>To add an image, drag and drop the image inside the textbox. To embed videos, paste the embed code from whatever site you uploaded your video to.</p>
+    </div>
+  </div>
+
+  <div id="post-submit" class="section action-buttons">
+    <h6>Publish</h6>
+
+    <div class="button publish-button make-draft">Draft</div>
+    <div class="button publish-button make-publish">Publish</div>
+
+    {{#if updated_at}}
+    <div class="info publish-status"><p><strong>{{#if draft }}DRAFT{{else}}PUBLISHED{{/if}}</strong> Last saved to server: {{time updated_at}}<p>
+    <p><a href="{{posturl this}}" target="_blank">View Post</a></p>
+    </div>
+    {{/if}}
+  </div>
+  <div class="cover"></div>
+</div>

@@ -1,0 +1,35 @@
+.form {
+  input, textarea {
+    border: .0625em solid #aaa;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    font: inherit;
+    line-height: 1.5em;
+    margin: 0 0 1.5em 0;
+    padding: 0.5em;
+  }
+
+  input:focus, textarea:focus {
+    outline: 1px solid transparentize($highlight_blue,0.4);
+    border: 1px solid $highlight_blue;
+    box-shadow: none;
+  }
+
+  .publish-buttons {
+    margin: 1em 0;
+    text-align: right;
+
+    button {
+      margin: 0 0.5em;
+    }
+
+    button:first-child {
+      margin-left: 0;
+    }
+
+    button:last-child {
+      margin-right: 0;
+    }
+  }
+}
