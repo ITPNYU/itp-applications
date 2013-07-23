@@ -1,5 +1,8 @@
 models = window.models || {};
 
 models.Reading = Backbone.Model.extend({
-  urlRoot: '/api/assignments'
+  urlRoot: '/api/assignments',
+  initialize: function () {
+    this.unset('year');
+  }
 });

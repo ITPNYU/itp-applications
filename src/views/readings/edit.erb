@@ -1,0 +1,6 @@
+<script type="text/javascript">
+$(document).ready(function () {
+  var reading = new models.Reading(<%= @model.to_json %>)
+  var view = new views.ReadingEditView({model: reading});
+});
+</script>

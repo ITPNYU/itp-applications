@@ -3,6 +3,7 @@ views = window.views || {};
 views.ReadingEditView = Backbone.View.extend({
   initialize: function () {
     this.render().el;
+    this.model.bind('save', this.render, this);
   },
 
   el: '#main-content',
@@ -25,13 +26,42 @@ views.ReadingEditView = Backbone.View.extend({
     return this;
   },
 
+  saveModel: function (is_draft) {
+    var view = this;
+
+    this.model.set({
+      'title': this.$el.find('#reading-form-title').val(),
+      'content' : this.$el.find('#reading-form-content').val(),
+      'draft' : is_draft
+    });
+
+    this.model.save(this.model.attributes, {
+      success: function () {
+        view.resetButtons();
+        view.model.unset('year');
+        view.render().el;
+      }
+    });
+  },
+
   saveAsDraft: function (e) {
     this.draft_button.start();
+    this.publish_button.disable();
+
+    this.saveModel(true);
     return false;
   },
 
   saveAsPublished: function (e) {
     this.publish_button.start();
+    this.draft_button.disable();
+
+    this.saveModel(false);
     return false;
+  },
+
+  resetButtons: function () {
+    this.publish_button.stop().enable();
+    this.draft_button.stop().enable();
   }
 });
