@@ -11,7 +11,11 @@ Handlebars.registerHelper('shortDate', function(timestamp) {
 })
 
 Handlebars.registerHelper('time', function(timestamp) {
-  return moment(timestamp).format('MMMM Do YYYY, h:mm:ss a');
+  if (timestamp === null) {
+    return "n/a";
+  } else {
+    return moment(timestamp).format('MMMM Do YYYY, h:mm:ss a');
+  }
 });
 
 Handlebars.registerHelper('posturl', function (t) {

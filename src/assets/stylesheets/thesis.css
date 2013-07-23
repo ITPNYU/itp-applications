@@ -333,8 +333,6 @@ button:hover {
   line-height: 1.714285714em;
   padding: 0 0.75em;
   margin: 0;
-  border-right: 1px solid rgba(210, 210, 210,0.9);
-  border-left: 1px solid rgba(255,255,255,0.8);
 }
 
 #header ul li:first-child {

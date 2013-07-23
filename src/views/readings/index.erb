@@ -1,5 +1,7 @@
 <script type="text/javascript" src="/assets/views/readings/index.js"></script>
 <script type="text/javascript">
 $(document).ready(function () {
+  var readings = new models.Reading(<%= @collection.to_json %>)
+  var view = new views.ReadingIndexView({collection: readings});
 });
 </script>
