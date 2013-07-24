@@ -18,8 +18,8 @@ class Post
   belongs_to :assignment
   belongs_to :user
 
-  has n, :responses, self
-  belongs_to :parent, self
+  has n, :responses, self, :child_key => [:original_id]
+  belongs_to :original, self, :required => false
 
   self.per_page = 10
 

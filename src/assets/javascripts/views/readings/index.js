@@ -14,12 +14,10 @@ views.ReadingIndexView = Backbone.View.extend({
   },
 
   render: function () {
+    var currentReading = this.collection.getCurrent();
     this.$el.html(this.template({readings: this.collection.toJSON()}));
-    var currentReading = this.collection.getCurrent()
-    if (currentReading !== null) {
-      this.currentView = new views.ReadingShowView({model: currentReading});
-      this.$el.find('#reading-detail').append(this.currentView.render().el);
-    }
+    this.currentView = new views.ReadingShowView({model: currentReading});
+    this.$el.find('#expanded-reading').append(this.currentView.render().el);
     return this;
   },
 
