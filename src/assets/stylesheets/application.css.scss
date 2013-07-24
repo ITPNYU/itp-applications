@@ -5,7 +5,6 @@
 //= require glyphicons
 //= require chosen
 
-//= require thesis
 //= require progress-form
 //= require dashboard
 //= require ladda-theme
@@ -13,7 +12,9 @@
 @import "variables";
 @import "mixins";
 @import "grid";
+@import "thesis";
 @import "layouts";
 @import "utilities";
 @import "reset";
 @import "forms";
+@import "readings";

@@ -5,7 +5,7 @@
  *****************************************************************************/
 
 a {
-  color: rgb(53, 130, 245);
+  color: $blue;
   text-decoration: none;
 }
 
@@ -226,45 +226,54 @@ button:hover {
  *
  *****************************************************************************/
 
+html {
+  background: #242424;
+}
+
 #top, #middle, #bottom {
   min-width: 960px;
 }
 
 #top {
-  background-color: #efefef;
+  color: #f2f2f2;
 }
 
 #middle {
+  background: #fafafa;
   min-height: 400px;
   padding-top: 0.75em;
 }
 
-#header {
-  padding: 0.5em 0;
-}
-
-#header, #middle, #footer {
+#header, #middle-inner, #footer {
   clear: both;
   max-width: 63.75rem;
   margin: 0 auto;
+}
+
+#header {
+  padding-top: 0.5em;
 }
 
 #middle {
   overflow-y: auto;
 }
 
-#main-content {
+#middle-inner {
   width: 100%;
 }
 
 #bottom {
+  color: rgb(191,174,159);
   margin-top: 3em;
 }
 
 #footer {
-  border-top: 1px solid #ddd;
   font-size: 80%;
   padding: 1em 0 2em;
+}
+
+#bottom a {
+  color: rgb(191,104,54);
 }
 
 /*****************************************************************************
@@ -306,7 +315,7 @@ button:hover {
  *****************************************************************************/
 
 #header a {
-  color: black;
+  color: #f2f2f2;
 }
 
 #header a:hover {
@@ -755,11 +764,6 @@ label.checked:hover,
 .inline li {
   display: inline-block;
   margin: 0 0.5em 0 0;
-}
-
-.username {
-  color: #7a46bf;
-  font-weight: bold;
 }
 
 .float-right {

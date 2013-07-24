@@ -1,7 +1,17 @@
+<div id="reading-list" class="span3">
 <h1>Reading list</h1>
 
 {{#each readings}}
-  <div class='reading-item'>
-    <h2>{{title}}</h2>
+  <div class='reading-item {{#if current}}current{{/if}}'>
+    <a href="#" data-id="{{id}}" class="reading-list-item">{{title}}</a>
   </div>
 {{/each}}
+</div>
+
+<div class="span9">
+  <div id="reading-detail">
+  </div>
+
+  <div id="reading-responses">
+  </div>
+</div>
