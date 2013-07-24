@@ -1,5 +1,4 @@
 //= require fonts
-//= require grid
 //= require widgets
 
 // library stuff
@@ -10,6 +9,12 @@
 //= require progress-form
 //= require dashboard
 //= require ladda-theme
+
+@import "variables";
+@import "mixins";
+@import "grid";
+@import "layouts";
+@import "utilities";
 
 @import 'colors';
 @import 'reset';
