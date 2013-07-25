@@ -26,6 +26,8 @@ views.ResponsesView = Backbone.View.extend({
     this.collection.bind('change', this.render, this);
   },
 
+  className: 'reading-response',
+
   setUrl: function (url) {
     this.collection.url = url;
     this.collection.fetch();

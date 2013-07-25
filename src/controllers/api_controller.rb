@@ -74,7 +74,7 @@ class API < Sinatra::Base
       halt 404 unless env['warden'].user.admin?
     end
 
-    @assignment.posts.to_json
+    @assignment.posts.to_json(:relationships => {:user => {:include => [:first_name, :last_name, :netid]}})
   end
 
   # create
