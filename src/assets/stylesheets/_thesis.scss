@@ -236,6 +236,7 @@ html {
 
 #top {
   color: #f2f2f2;
+  font-family: $sansFontFamily;
 }
 
 #middle {
@@ -256,10 +257,6 @@ html {
 
 #middle {
   overflow-y: auto;
-}
-
-#middle-inner {
-  width: 100%;
 }
 
 #bottom {
