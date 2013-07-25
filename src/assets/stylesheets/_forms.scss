@@ -1,4 +1,6 @@
-.form {
+form {
+  margin: 1.5em 1em;
+
   input, textarea {
     border: .0625em solid #aaa;
     -webkit-border-radius: 2px;
@@ -16,8 +18,29 @@
     box-shadow: none;
   }
 
+  button {
+    font-family: $sansFontFamily;
+  }
+
+  textarea {
+    font: inherit;
+    outline: 0;
+    line-height: 1.5em;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    width: 100%;
+    min-height: 400px;
+    height: 100%;
+    margin: 0;
+  }
+
+  textarea.short {
+    min-height: 250px;
+  }
+
+
   .publish-buttons {
-    margin: 1em 0;
+    margin: 0.5em 0;
     text-align: right;
 
     button {

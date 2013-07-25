@@ -99,8 +99,9 @@ h6 {
 */
 
 h2 {
-  font-size: 1em;
-  line-height: 3em;
+  font-size: 1.35em;
+  line-height: 1.6em;
+  margin: 0.5em 0;
 }
 
 h3 {
@@ -152,18 +153,6 @@ input, textarea {
 
 strong, b {
   font-weight: bold;
-}
-
-textarea {
-  font: inherit;
-  outline: 0;
-  line-height: 1.5em;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  width: 100%;
-  min-height: 400px;
-  height: 100%;
-  margin: 0;
 }
 
 input[type=text],

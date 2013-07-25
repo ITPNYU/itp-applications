@@ -1,11 +1,3 @@
-Handlebars.registerHelper('md', function(content) {
-  if (typeof content === 'undefined') {
-    return '';
-  } else {
-    return marked(content);
-  }
-});
-
 Handlebars.registerHelper('shortDate', function(timestamp) {
   return moment(timestamp).format('M/D')
 })
@@ -14,7 +6,7 @@ Handlebars.registerHelper('time', function(timestamp) {
   if (timestamp === null) {
     return "n/a";
   } else {
-    return moment(timestamp).format('MMMM Do YYYY, h:mm:ss a');
+    return moment(timestamp).format('MMM Do h:mma');
   }
 });
 

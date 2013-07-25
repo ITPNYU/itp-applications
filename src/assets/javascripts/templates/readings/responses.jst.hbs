@@ -1,8 +1,9 @@
 {{#each responses}}
-<div class="row-fluid">
+<div class="row reading-response">
   <div class="span3">
     <h2>{{user.first_name}} {{user.last_name}}</h2>
+    <h3>{{time published_at}}
   </div>
-  <div class="span9">{{content}}</div>
+  <div class="span9 content">{{content}}</div>
 </div>
 {{/each}}
