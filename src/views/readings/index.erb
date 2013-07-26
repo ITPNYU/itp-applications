@@ -2,6 +2,10 @@
 $(document).ready(function () {
   var j = <%= @collection.to_json %>;
   var readings = new collections.Readings(j);
-  var view = new views.ReadingIndexView({collection: readings});
+  var view = new views.ReadingIndexView({collection: readings
+    <% if @model %>,
+    current: <%= @model.id %>
+    <% end %>
+    });
 });
 </script>

@@ -1,9 +1,13 @@
 views = window.views || {};
 
 views.ReadingIndexView = Backbone.View.extend({
-  initialize: function () {
+  initialize: function (opts) {
+    console.log(opts);
     this.render().el;
     this.collection.bind('set:current', this.render, this);
+    if (opts.current) {
+      this.collection.setCurrent(opts.current);
+    }
   },
 
   el: '#main-content',

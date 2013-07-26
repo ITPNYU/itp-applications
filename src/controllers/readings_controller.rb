@@ -18,12 +18,13 @@ class Readings < Sinatra::Base
 
   get '/:id' do
     @model = Assignment.get_active(params[:id])
+    @collection = Assignment.all_active
 
     if @model.draft
       halt 404 unless env['warden'].user.admin?
     end
 
-    erb :'readings/show'
+    erb :'readings/index'
   end
 
   # Edit page

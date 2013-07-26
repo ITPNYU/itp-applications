@@ -48,7 +48,6 @@ views.ResponsesView = Backbone.View.extend({
   template: JST['templates/readings/responses'],
 
   render: function () {
-    console.log('render resposnes', this.collection.toJSON(),this.$el);
     this.$el.html(this.template({responses: this.collection.toJSON()}));
     return this;
   }
