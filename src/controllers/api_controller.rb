@@ -44,9 +44,12 @@ class API < Sinatra::Base
     @post.to_json
   end
 
-  # Assignments
-  #
-  # CRUD interface for Assignments, aliased as "Readings"
+
+  #################################################
+  #                                               #
+  #          Assignments                          #
+  #                                               #
+  #################################################
 
   # index
   get '/assignments' do

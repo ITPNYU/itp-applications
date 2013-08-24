@@ -33,13 +33,7 @@ class Main < Sinatra::Base
     env['warden'].authenticate!
     @current_user = env['warden'].user
 
-    if @current_user.student?
-      erb :'dashboards/student'
-    elsif @current_user.admin?
-      erb :'dashboards/advisor'
-    else
-      erb :'dashboards/provisional'
-    end
+    erb :dashboard
   end
 
   # Check top level against student netids, redirect to student page if there

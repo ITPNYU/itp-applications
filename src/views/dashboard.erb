@@ -2,7 +2,9 @@
   <div class="row-fluid">
     <div class="span6">
       <h2><a href="/readings">Reading Responses</a></h2>
+      <% if env['warden'].user.admin? %>
       <a href="/readings/new" class="ladda-button" data-size="m" data-color="blue">Add to the Reading List</a>
+      <% end %>
     </div>
 
     <div class="span6">
