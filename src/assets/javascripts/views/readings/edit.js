@@ -28,9 +28,16 @@ views.ReadingEditView = Backbone.View.extend({
 
   saveModel: function (is_draft) {
     var view = this;
+    var title = this.$el.find('#reading-form-title').val();
+
+    if (title.length === 0) {
+      this.draft_button.stop().enable();
+      this.publish.stop().enable();
+      return false;
+    }
 
     this.model.set({
-      'title': this.$el.find('#reading-form-title').val(),
+      'title': title,
       'content' : this.$el.find('#reading-form-content').val(),
       'draft' : is_draft
     });

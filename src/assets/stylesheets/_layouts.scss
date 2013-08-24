@@ -14,3 +14,14 @@
   padding-left: $gridGutterWidth;
   @include clearfix();
 }
+
+#site-title {
+  font-size: 1.2em;
+  letter-spacing: 0.1em;
+  font-family: "Merriweather";
+  margin-right: 1em;
+}
+
+.nav-link {
+  margin-right: 0.75em;
+}

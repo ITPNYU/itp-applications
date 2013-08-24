@@ -19,22 +19,15 @@
 <div id="top">
   <div id="header" class="container-fluid">
     <div class="row-fluid">
-      <div class="span3">
-        <a href="/">Applications</a>
+      <div class="span7">
+        <a id="site-title" href="/">Applications</a>
+        <a class="nav-link" href="/readings">Readings</a>
+        <a class="nav-link" href="/experiences">Experiences</a>
       </div>
 
-      <div id="account-nav" class="span6 offset3">
+      <div id="account-nav" class="span5">
       <% if env['warden'].authenticated? %>
-        <ul>
-
-          <li class="username"><%= @current_user.first_name %></li>
-
-          <% if @current_user.student? %>
-          <li><a href="/students/new" title="Write a New Post"><div class="glyphicons pencil"><i></i></div></a></li>
-          <% end %>
-
-          <li><a href="/admin"><div class="glyphicons settings"><i></i></div></a></li>
-          <li><a href="/auth/logout" title="log out" class="glyphicons power"><i></i></a></li>
+        <a href="/auth/logout" title="log out">Log Out</a>
         </ul>
       <% else %>
         <a href="/auth/login">Log In</a>

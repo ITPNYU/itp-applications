@@ -9,31 +9,8 @@ class Students < Sinatra::Base
 
   get '/' do
     authenticate
-    @posts = Post.published.paginate(page: 1)
+    @students = User.students
     erb :'students/index'
-  end
-
-  get '/page/:page_number/?' do
-    authenticate
-    @posts = Post.published.paginate(page: params[:page_number])
-    erb :'students/index'
-  end
-
-  #############################################################################
-  #
-  # COMMENTS
-  #
-  #############################################################################
-
-  get '/:netid/comments/?' do
-    authenticate
-    @user = User.first(netid:params[:netid])
-
-    halt 404 if @user.nil?
-
-    @comments_by = Comment.all(user: @user, order: :created_at.desc)
-    @comments_to = @user.posts.comments.all(order: :created_at.desc)
-    erb :'students/comments'
   end
 
   #############################################################################
