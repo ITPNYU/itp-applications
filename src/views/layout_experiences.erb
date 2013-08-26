@@ -1,0 +1,83 @@
+<% @current_user = env['warden'].user %>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ITP Applications</title>
+  <meta name="robots" content="noindex">
+  <meta name="googlebot" content="noindex">
+
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700|Merriweather:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="/assets/application.css" type="text/css">
+  <style>
+  #map-canvas img {
+    max-width: none;
+    max-height: none;
+  }
+
+  #middle {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  </style>
+  <script>CKEDITOR_BASEPATH = '/assets/ckeditor/';</script>
+  <script src="/assets/application.js" type="text/javascript"></script>
+</head>
+
+<body <% if env['warden'].authenticated? %>data-netid="<%= env['warden'].user.netid %>"<% end %>>
+
+<div id="top">
+  <div id="header" class="container-fluid">
+    <div class="row-fluid">
+      <div class="span7">
+        <a id="site-title" href="/">Applications</a>
+        <a class="nav-link" href="/readings">Readings</a>
+        <a class="nav-link" href="/experiences">Experiences</a>
+      </div>
+
+      <div id="account-nav" class="span5">
+      <% if env['warden'].authenticated? %>
+        <a href="/auth/logout" title="log out">Log Out</a>
+        </ul>
+      <% else %>
+        <a href="/auth/login">Log In</a>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="middle">
+  <div id="flash" class="span12">
+  <% [:error, :success].each do |name| %><% if flash.has?(name) %>
+    <div class="message-<%= name %>"><%= flash[name] %></div>
+  <% end %><% end %>
+  </div>
+  <div id="map-canvas"></div>
+
+  <div id="middle-inner" class="container-fluid">
+    <div class="row-fluid" id="main-content">
+    <%= yield %>
+    </div>
+  </div>
+</div>
+
+<div id="bottom">
+  <div id="footer" class="container-fluid">
+    <span class="span2">
+      <h2>ITP</h2>
+      <p><a href="http://itp.nyu.edu">ITP Homepage</a></p>
+      <p><a href="http://thesis.itp.io">Thesis</a></p>
+      <p><a href="http://itpresidents.github.io">Residents' Blog</a></p>
+    </span>
+    <div class="span6">
+      <h2>Feedback/Issues</h2>
+      <p>If you've had an issue, please file a bug report <a href="https://github.com/itpnyu/itp-applications/issues">here</a>.</p>
+    </div>
+    <div style="clear:both;height:0;">&nbsp;</div>
+  </div>
+</div>
+
+</body>
+</html>

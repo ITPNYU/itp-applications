@@ -1,0 +1,55 @@
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script>
+var posts = <%= @posts.to_json %>
+
+function initialize() {
+  var mapOptions = {
+    zoom: 11,
+    center: new google.maps.LatLng(40.7209817, -73.9613342),
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    mapTypeControl: false,
+    streetViewControl: false
+  };
+
+  var map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+
+  _.each(posts, function(post){
+    post.lat = post.coords.split(",")[0]
+    post.lon = post.coords.split(",")[1]
+
+    var ll = new google.maps.LatLng(post.lat, post.lon);
+    var marker = new google.maps.Marker({
+      map: map,
+      position: ll,
+      title: post.title
+    })
+
+    google.maps.event.addListener(marker, 'click', function() {
+      $('#map-canvas').css('height','300px');
+      $('#'+post.id).find('.content').show().end().siblings().hide();
+      window.setTimeout(function () {
+        google.maps.event.trigger(map, 'resize');
+        map.panTo(marker.getPosition());
+        window.setTimeout(function () {
+          map.setZoom(16);
+        }, 400);
+      }, 400);
+    });
+  });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
+
+<div>
+  <% @posts.each do |post| %>
+  <div class="post" id="<%= post.id %>">
+    <h2><%= post.title %></h2>
+    <div class="content">
+      <%= post.content %>
+    </div>
+  </div>
+  <% end %>
+</div>
