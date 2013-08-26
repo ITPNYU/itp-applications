@@ -426,24 +426,6 @@ html {
   color: rgb(53, 130, 245);
 }
 
-.category-list {
-  list-style-type: none;
-  margin: 0;
-}
-
-.category-list li {
-  display: inline-block;
-  margin: 0 1em 0 0;
-}
-
-.category-list li a {
-  color: #bbb;
-}
-
-.category-list li a.current {
-  color: #000;
-}
-
 .post-content {
   margin-top: 1.5em;
   word-wrap: break-word;
@@ -527,88 +509,6 @@ html {
   line-height: 1.714285714em;
 }
 
-/*****************************************************************************
- *
- * EXCERPTS and DASHBOARD VIEWS
- *
- *****************************************************************************/
-
-.excerpt {
-  border-bottom: .0625em solid #ddd; /* 1 / 24 */
-  padding: 0.75em 0 0.6875em 0;
-}
-
-.excerpt .content {
-  font-size: .9em;
-}
-
-.excerpt .content * {
-  font-size: 1em;
-}
-
-.excerpt h1, .excerpt h2, .excerpt h3, .excerpt h4, .excerpt h5, .excerpt h6,
-.excerpt p {
-  margin: 0.75em 0;
-  line-height: 1.5em;
-}
-
-.feed-item,
-.assignment-list {
-  border-bottom: .071428571em solid #ddd; /* 1 / 14 */
-  font-size: 0.875em; /* 14 / 16 */
-  line-height: 1.142857143em; /* 16 / 14 */
-}
-
-.feed-item {
-  padding: 1.107142857em 0 1.107142857em;
-}
-
-.assignment-list {
-  padding: 0 0 1.107142857em;
-  margin-bottom: 1.107142857em;
-}
-
-.assignment-list h3,
-.post-excerpt h3.title {
-  font-size: 1.142857143em; /* 16 / 14 */
-  font-weight: normal;
-  line-height: 3em;
-}
-
-.assignment-list .reply-link {
-  display: block;
-  line-height: 3.428571428em;
-}
-
-.post-excerpt {
-  border-bottom: .0625em solid #ddd; /* 1 / 16 */
-  margin: 1.5em 0 0.75em;
-  padding-bottom: .6875em;
-}
-
-.post-excerpt h3.title {
-  line-height: 1.5em;
-}
-
-.post-excerpt h4.author {
-  font-size: 1em;
-  line-height: 1.5em;
-  margin: 0;
-}
-
-.post-excerpt h4.author a {
-  color: rgb(53, 130, 245);
-}
-
-.post-excerpt h5.category {
-  color: #bbb;
-  font-size: 0.875em;
-}
-
-.post-excerpt .content {
-  margin: 0.75em 0;
-}
-
 .button-labels label:hover,
 .button-labels a:hover {
   background-color: rgb(65, 159, 255);
@@ -651,18 +551,6 @@ label.checked:hover,
 .button-labels a {
   text-decoration: none;
 }
-
-
-/*****************************************************************************
- *
- * PAGE CONTENT
- *
- *****************************************************************************/
-
-.page-content p {
-  margin: 1.5em 0;
-}
-
 
 /*****************************************************************************
  *
