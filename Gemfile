@@ -21,6 +21,7 @@ gem 'will_paginate', '3.0.3', require: ['will_paginate', 'will_paginate/data_map
 # assets
 gem 'sprockets', '~>2.0'
 gem 'sass'
+gem 'coffee-script'
 gem 'handlebars_assets'
 
 # resources

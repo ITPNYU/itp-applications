@@ -10,6 +10,10 @@ GEM
     bcrypt-ruby (3.1.1)
     builder (3.2.2)
     canonix (0.1.1)
+    coffee-script (2.2.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.6.2)
     daemons (1.1.9)
     dalli (1.0.5)
     data_mapper (1.2.0)
@@ -131,6 +135,7 @@ PLATFORMS
 DEPENDENCIES
   RedCloth (= 4.2.9)
   aws-s3 (= 0.6.3)
+  coffee-script
   dalli (= 1.0.5)
   data_mapper (= 1.2.0)
   dm-postgres-adapter (= 1.2.0)
