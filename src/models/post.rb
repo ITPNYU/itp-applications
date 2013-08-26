@@ -23,6 +23,14 @@ class Post
 
   self.per_page = 10
 
+  def lat
+    self.coords.split(",")[0].to_i
+  end
+
+  def lon
+    self.coords.split(",")[1].to_i
+  end
+
   before :save do
     publish
   end
