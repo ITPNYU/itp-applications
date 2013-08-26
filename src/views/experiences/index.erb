@@ -1,4 +1,3 @@
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 <script>
 var posts = <%= @posts.to_json %>
 
@@ -32,7 +31,7 @@ function initialize() {
         google.maps.event.trigger(map, 'resize');
         map.panTo(marker.getPosition());
         window.setTimeout(function () {
-          map.setZoom(16);
+          map.setZoom(17);
         }, 400);
       }, 400);
     });
@@ -43,7 +42,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 </script>
 
-<div>
+<div class="span12">
   <% @posts.each do |post| %>
   <div class="post" id="<%= post.id %>">
     <h2><%= post.title %></h2>

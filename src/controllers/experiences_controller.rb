@@ -6,9 +6,10 @@ class Experiences < Sinatra::Base
     erb :'experiences/index', layout: :layout_experiences
   end
 
-  get '/:id' do
+  get '/new' do
+    erb :'experiences/new', layout: :layout_experiences
   end
 
-  get '/new' do
+  get '/:id' do
   end
 end
