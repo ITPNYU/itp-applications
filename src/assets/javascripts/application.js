@@ -11,10 +11,10 @@
 //= require ckeditor/ckeditor
 //= require ckeditor/adapters/jquery
 //= require handlebars-helpers
-// require main
+//= require main
 //= require image_upload
 
-// require backbone_setup
+//= require backbone_setup
 //= require_tree ./templates
 //= require_tree ./models
 //= require_tree ./collections

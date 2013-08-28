@@ -1,0 +1,25 @@
+<div class="span12">
+  <h1>New Experience</h1>
+
+  <form class="form">
+    <h2><span class="glyphicons google_maps"><i></i></span> Location<h2>
+    <h3>Title</h3>
+    <input type="text" id="experience-title" value="{{title}}" />
+
+    <h3>Post</h3>
+    <textarea id="experience-content">{{content}}</textarea>
+
+    <div class="publish-info">
+      <p>
+        <strong>{{#if draft}}Draft{{else}}Published{{/if}}</strong>
+        Last Saved: {{time updated_at}}
+      </p>
+    </div>
+
+    <div class="publish-buttons">
+      <button id="reading-form-draft" class="ladda-button" data-size="l" data-color="red" data-style="expand-right"><span class="ladda-label">Draft</span></button>
+
+      <button id="reading-form-publish" class="ladda-button" data-size="l" data-color="blue" data-style="expand-right"><span class="ladda-label">Publish</span></button>
+    </div>
+  </form>
+</div>

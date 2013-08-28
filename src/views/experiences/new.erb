@@ -1,4 +1,5 @@
 <script>
+$(function () {
   function initialize() {
     var mapOptions = {
       zoom: 11,
@@ -10,35 +11,21 @@
     $("#map-canvas").css('height',400);
     var map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
+
+
+  google.maps.event.addListener(map, 'click', function(event) {
+    var lat = event.latLng.lat();
+    var lng = event.latLng.lng();
+    var marker = new google.maps.Marker({
+      map: map,
+      position: new google.maps.LatLng(lat,lng),
+      title: "new post"
+    })
+  });
   }
 
   google.maps.event.addDomListener(window, 'load', initialize);
+
+  exv = new classes.ExperiencesNewView
+})
 </script>
-
-<div class="span12">
-  <h6><a href="/experiences">Experiences</a></h6>
-
-  <h3>New</h3>
-
-  <form class="form span12">
-  <h2>Title</h2>
-  <input type="text" id="experience-title" value="{{title}}" />
-
-  <h2>Texts</h2>
-  <textarea id="experience-content">{{content}}</textarea>
-
-  <div class="publish-info">
-    <p>
-      <strong>{{#if draft}}Draft{{else}}Published{{/if}}</strong>
-      Last Saved: {{time updated_at}}
-    </p>
-  </div>
-
-  <div class="publish-buttons">
-    <button id="reading-form-draft" class="ladda-button" data-size="l" data-color="red" data-style="expand-right"><span class="ladda-label">Draft</span></button>
-
-    <button id="reading-form-publish" class="ladda-button" data-size="l" data-color="blue" data-style="expand-right"><span class="ladda-label">Publish</span></button>
-  </div>
-</form>
-
-</div>

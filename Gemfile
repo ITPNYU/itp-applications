@@ -36,4 +36,4 @@ group :development do
   gem 'shotgun', '0.9'
 end
 
-gem 'ejs'
+gem "execjs"

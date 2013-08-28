@@ -64,7 +64,6 @@ GEM
       dm-core (~> 1.2.0)
     do_postgres (0.10.13)
       data_objects (= 0.10.13)
-    ejs (1.1.1)
     eventmachine (1.0.3)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -139,7 +138,7 @@ DEPENDENCIES
   dalli (= 1.0.5)
   data_mapper (= 1.2.0)
   dm-postgres-adapter (= 1.2.0)
-  ejs
+  execjs
   handlebars_assets
   json (= 1.7.5)
   omniauth (= 1.1.1)
