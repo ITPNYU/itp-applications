@@ -93,7 +93,7 @@ GEM
     rack-flash3 (1.0.1)
       rack
       rack
-    rack-protection (1.5.0)
+    rack-protection (~> 2.0.0)
       rack
     redcarpet (2.1.1)
     redis (3.0.4)
